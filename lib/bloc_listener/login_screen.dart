@@ -150,7 +150,7 @@ class _LoginViewState extends State<_LoginView> {
                             ),
                             SizedBox(height: 4),
                             Text('Email : test@test.com'),
-                            Text('Mot de passe : 123456'),
+                            Text('Mot de passe : 1234567'),
                             SizedBox(height: 8),
                             Text(
                               'BlocBuilder → gère l\'UI (loading, champs)\nBlocListener → gère les side effects (navigation, SnackBar)',
