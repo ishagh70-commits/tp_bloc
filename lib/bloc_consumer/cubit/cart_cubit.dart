@@ -15,10 +15,10 @@ class Product {
 }
 
 const availableProducts = [
-  Product(id: '1', name: 'Casque Audio', price: 79.99, emoji: '🎧'),
-  Product(id: '2', name: 'Clavier Mécanique', price: 129.99, emoji: '⌨️'),
-  Product(id: '3', name: 'Souris Gamer', price: 59.99, emoji: '🖱️'),
-  Product(id: '4', name: 'Webcam HD', price: 89.99, emoji: '📷'),
+  Product(id: '1', name: 'Casque Audio', price: 3000, emoji: '🎧'),
+  Product(id: '2', name: 'Clavier Mécanique', price: 5000, emoji: '⌨️'),
+  Product(id: '3', name: 'Souris Gamer', price: 2200, emoji: '🖱️'),
+  Product(id: '4', name: 'Webcam HD', price: 3500, emoji: '📷'),
 ];
 
 sealed class CartState {}
@@ -92,10 +92,10 @@ class CartCubit extends Cubit<CartState> {
     // Simulation appel API paiement
     await Future.delayed(const Duration(seconds: 2));
 
-    // Simule un échec si le total dépasse 250€
-    if (total > 250) {
+    // Simule un échec si le total dépasse 10 000 MRU
+    if (total > 10000) {
       emit(CartOrderFailure(
-        message: 'Paiement refusé : limite dépassée (250€ max).',
+        message: 'Paiement refusé : limite dépassée (10 000 MRU max).',
         items: items,
         total: total,
       ));

@@ -154,7 +154,7 @@ class _CartView extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  '${product.price.toStringAsFixed(2)} €',
+                                  '${product.price.toStringAsFixed(2)} MRU',
                                   style: const TextStyle(
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -191,7 +191,7 @@ class _CartView extends StatelessWidget {
                                 fontSize: 18, fontWeight: FontWeight.bold)),
                         // BUILDER affiche le total dynamiquement
                         Text(
-                          '${total.toStringAsFixed(2)} €',
+                          '${total.toStringAsFixed(2)} MRU',
                           style: const TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
@@ -200,9 +200,9 @@ class _CartView extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 8),
-                    if (total > 250)
+                    if (total > 10000)
                       const Text(
-                        '⚠️ Total > 250€ : le paiement sera refusé (test)',
+                        '⚠️ Total > 10 000 MRU : le paiement sera refusé (test)',
                         style: TextStyle(fontSize: 12, color: Colors.orange),
                       ),
                     const SizedBox(height: 12),
@@ -262,7 +262,7 @@ class _ProductCard extends StatelessWidget {
               Text(product.name,
                   style: const TextStyle(
                       fontSize: 12, fontWeight: FontWeight.bold)),
-              Text('${product.price.toStringAsFixed(2)} €',
+              Text('${product.price.toStringAsFixed(2)} MRU',
                   style: const TextStyle(fontSize: 12, color: Colors.grey)),
             ],
           ),
